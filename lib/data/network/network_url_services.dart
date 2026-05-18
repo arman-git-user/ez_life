@@ -22,7 +22,7 @@ class NetworkUrlServices implements BaseUrlServices {
       'contents': [
         {
           'parts': [
-            {'text': data},
+            { 'text': data },
           ],
         },
       ],
@@ -37,7 +37,7 @@ class NetworkUrlServices implements BaseUrlServices {
             },
             body: jsonEncode(bodyParams),
           )
-          .timeout(Duration(seconds: 10));
+          .timeout(Duration(seconds: 20));
       jsonResponse = returnJsonResponse(response);
       return jsonResponse;
     } on SocketException {
